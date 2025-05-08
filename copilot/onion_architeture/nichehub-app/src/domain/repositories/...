@@ -1,0 +1,26 @@
+// /nichehub-app/nichehub-app/src/domain/repositories/IUserRepository.ts
+export interface IUserRepository {
+    registerUser(email: string, username: string, password: string): Promise<void>;
+    loginUser(email: string, password: string): Promise<string>; // Returns JWT token
+    getUserById(userId: string): Promise<User | null>;
+    updateUser(userId: string, userData: Partial<User>): Promise<void>;
+    deleteUser(userId: string): Promise<void>;
+}
+
+// /nichehub-app/nichehub-app/src/domain/repositories/IPostRepository.ts
+export interface IPostRepository {
+    createPost(postData: Post): Promise<Post>;
+    fetchPosts(communityId: string): Promise<Post[]>;
+    getPostById(postId: string): Promise<Post | null>;
+    updatePost(postId: string, postData: Partial<Post>): Promise<void>;
+    deletePost(postId: string): Promise<void>;
+}
+
+// /nichehub-app/nichehub-app/src/domain/repositories/ICommunityRepository.ts
+export interface ICommunityRepository {
+    createCommunity(communityData: Community): Promise<Community>;
+    fetchCommunities(): Promise<Community[]>;
+    getCommunityById(communityId: string): Promise<Community | null>;
+    updateCommunity(communityId: string, communityData: Partial<Community>): Promise<void>;
+    deleteCommunity(communityId: string): Promise<void>;
+}

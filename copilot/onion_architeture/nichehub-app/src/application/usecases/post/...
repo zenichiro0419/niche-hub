@@ -1,0 +1,17 @@
+// src/application/usecases/post/createPost.ts
+import { Post } from '../../../domain/entities/Post';
+import { IPostRepository } from '../../../domain/repositories/IPostRepository';
+
+export const createPost = async (postData: Omit<Post, 'id' | 'createdAt'>, postRepository: IPostRepository): Promise<Post> => {
+    const newPost = await postRepository.create(postData);
+    return newPost;
+};
+
+// src/application/usecases/post/fetchPosts.ts
+import { IPostRepository } from '../../../domain/repositories/IPostRepository';
+import { Post } from '../../../domain/entities/Post';
+
+export const fetchPosts = async (postRepository: IPostRepository): Promise<Post[]> => {
+    const posts = await postRepository.fetchAll();
+    return posts;
+};

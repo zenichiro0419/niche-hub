@@ -1,0 +1,30 @@
+Here is the content for the file /nichehub-app/nichehub-app/src/presentation/pages/Home.tsx:
+
+import React from 'react';
+import { PostCard } from '../components/PostCard';
+import { usePosts } from '../../hooks/usePosts';
+
+const Home: React.FC = () => {
+    const { posts, loading, error } = usePosts();
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error loading posts: {error.message}</div>;
+    }
+
+    return (
+        <div>
+            <h1>Home</h1>
+            <div>
+                {posts.map(post => (
+                    <PostCard key={post.id} post={post} />
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default Home;

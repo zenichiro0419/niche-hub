@@ -1,0 +1,88 @@
+/* Global styles for NicheHub application */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Noto Sans JP', sans-serif;
+    background-color: #eceff1; /* Light color */
+    color: #263238; /* Dark color */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: #5c6bc0; /* Primary color */
+}
+
+a {
+    text-decoration: none;
+    color: #4db6ac; /* Accent color */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #5c6bc0; /* Primary color */
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.sidebar {
+    background-color: #9575cd; /* Secondary color */
+    padding: 15px;
+    color: white;
+}
+
+.post-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.comment-section {
+    margin-top: 10px;
+}
+
+.notification-list {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.button {
+    background-color: #4db6ac; /* Accent color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #388e3c; /* Darker green for hover */
+}
+
+.input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.error {
+    color: #e57373; /* Error color */
+}
+
+.success {
+    color: #81c784; /* Success color */
+}

@@ -1,0 +1,22 @@
+// /nichehub-app/nichehub-app/src/application/usecases/user/registerUser.ts
+
+import { IUserRepository } from '../../domain/repositories/IUserRepository';
+import { User } from '../../domain/entities/User';
+
+export const registerUser = async (userData: Omit<User, 'id'>, userRepository: IUserRepository): Promise<User> => {
+    const newUser = new User(userData);
+    return await userRepository.create(newUser);
+};
+
+// /nichehub-app/nichehub-app/src/application/usecases/user/loginUser.ts
+
+import { IUserRepository } from '../../domain/repositories/IUserRepository';
+import { User } from '../../domain/entities/User';
+
+export const loginUser = async (email: string, password: string, userRepository: IUserRepository): Promise<User | null> => {
+    const user = await userRepository.findByEmail(email);
+    if (user && user.password === password) {
+        return user;
+    }
+    return null;
+};

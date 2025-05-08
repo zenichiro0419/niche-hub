@@ -1,0 +1,19 @@
+import { Post } from '../../../domain/entities/Post';
+import { IPostRepository } from '../../../domain/repositories/IPostRepository';
+
+interface CreatePostInput {
+    title: string;
+    content: string;
+    communityId: string;
+}
+
+export const createPost = async (input: CreatePostInput, postRepository: IPostRepository): Promise<Post> => {
+    const newPost = new Post({
+        title: input.title,
+        content: input.content,
+        communityId: input.communityId,
+        createdAt: new Date(),
+    });
+
+    return await postRepository.create(newPost);
+};

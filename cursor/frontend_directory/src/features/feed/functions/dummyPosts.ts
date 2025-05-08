@@ -1,0 +1,111 @@
+/**
+ * 投稿ダミーデータ
+ *
+ * @概要
+ *   - 各コミュニティ・各ユーザーに分散した10件のダミー投稿データ。
+ *   - 各投稿はPost型に準拠。
+ */
+import type { Post } from "../../../types";
+
+export const dummyPosts: Post[] = [
+  {
+    id: "post-1",
+    userId: "user-2",
+    communityId: "community-1",
+    content: "今日は大物が釣れました！",
+    createdAt: "2024-05-01T10:00:00Z",
+    likeCount: 3,
+    likedUserIds: ["user-3", "user-4", "user-5"],
+    commentCount: 2,
+  },
+  {
+    id: "post-2",
+    userId: "user-3",
+    communityId: "community-2",
+    content: "おすすめの小説を教えてください。",
+    createdAt: "2024-05-01T11:00:00Z",
+    likeCount: 2,
+    likedUserIds: ["user-2", "user-5"],
+    commentCount: 1,
+  },
+  {
+    id: "post-3",
+    userId: "user-4",
+    communityId: "community-3",
+    content: "Reactの新機能が気になる！",
+    createdAt: "2024-05-01T12:00:00Z",
+    likeCount: 4,
+    likedUserIds: ["user-2", "user-3", "user-5", "user-1"],
+    commentCount: 3,
+  },
+  {
+    id: "post-4",
+    userId: "user-5",
+    communityId: "community-4",
+    content: "最新映画の感想を語り合いましょう。",
+    createdAt: "2024-05-01T13:00:00Z",
+    likeCount: 1,
+    likedUserIds: ["user-3"],
+    commentCount: 0,
+  },
+  {
+    id: "post-5",
+    userId: "user-1",
+    communityId: "community-1",
+    content: "釣りイベントを開催します！",
+    createdAt: "2024-05-01T14:00:00Z",
+    likeCount: 2,
+    likedUserIds: ["user-2", "user-4"],
+    commentCount: 1,
+  },
+  {
+    id: "post-6",
+    userId: "user-2",
+    communityId: "community-2",
+    content: "今月の読書会はいつにしますか？",
+    createdAt: "2024-05-01T15:00:00Z",
+    likeCount: 0,
+    likedUserIds: [],
+    commentCount: 0,
+  },
+  {
+    id: "post-7",
+    userId: "user-3",
+    communityId: "community-3",
+    content: "TypeScriptの型推論が便利！",
+    createdAt: "2024-05-01T16:00:00Z",
+    likeCount: 3,
+    likedUserIds: ["user-1", "user-4", "user-5"],
+    commentCount: 2,
+  },
+  {
+    id: "post-8",
+    userId: "user-4",
+    communityId: "community-5",
+    content: "おすすめのカフェを紹介します。",
+    createdAt: "2024-05-01T17:00:00Z",
+    likeCount: 2,
+    likedUserIds: ["user-2", "user-3"],
+    commentCount: 1,
+  },
+  {
+    id: "post-9",
+    userId: "user-5",
+    communityId: "community-1",
+    content: "釣り初心者におすすめの道具は？",
+    createdAt: "2024-05-01T18:00:00Z",
+    likeCount: 1,
+    likedUserIds: ["user-3"],
+    commentCount: 0,
+  },
+  {
+    id: "post-10",
+    userId: "user-1",
+    communityId: "community-3",
+    content: "プログラミング勉強会を開催します。",
+    createdAt: "2024-05-01T19:00:00Z",
+    likeCount: 2,
+    likedUserIds: ["user-2", "user-5"],
+    commentCount: 1,
+  },
+];
